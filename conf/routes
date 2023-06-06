@@ -1,0 +1,34 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index()
+# GET     /api                        controllers.ApiController.getAll
+# GET     /api/:itemId                controllers.ApiController.getById(itemId: Long)
+# PUT     /api/done/:itemId           controllers.ApiController.markAsDone(itemId: Long)
+# DELETE  /api/done                   controllers.ApiController.deleteAllDone
+POST    /api                        controllers.ApiController.requestApiData()
+POST    /filteredApi                controllers.ApiController.filteredRequestApiData()
+POST    /business                   controllers.ApiController.requestBusinessByID()
+POST    /businessByAddress          controllers.ApiController.requestBusinessByAddress()
+POST    /activity                   controllers.DatabaseController.createActivity()
+POST    /getActivity                controllers.DatabaseController.getActivity()
+POST    /delActivity                controllers.DatabaseController.deleteActivity()
+POST    /trip                       controllers.DatabaseController.createTrip()
+POST    /getTrip                    controllers.DatabaseController.getTrip()
+POST    /delTrip                    controllers.DatabaseController.deleteTrip()
+POST    /user                       controllers.DatabaseController.createUser()
+POST    /getUser                    controllers.DatabaseController.getUser()
+POST    /delUser                    controllers.DatabaseController.deleteUser()
+POST    /friend                     controllers.DatabaseController.makeFriend()
+POST    /trips                      controllers.DatabaseController.getTrips()
+POST    /activities                 controllers.DatabaseController.getActivities()
+POST    /friends                    controllers.DatabaseController.getFriends()
+POST    /getFriendsTrips            controllers.DatabaseController.getFriendsTrips()
+POST    /updatePreferences          controllers.DatabaseController.updatePreferences()
+POST    /getPref                    controllers.DatabaseController.getPref()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
